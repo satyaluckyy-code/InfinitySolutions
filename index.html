@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfinitySolutions</title>
+    <style>
+        body { margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f8f9fa; font-family: sans-serif; text-align: center; overflow: hidden; }
+        .ribbon-container { cursor: pointer; transition: transform 0.3s ease; }
+        .ribbon-container:hover { transform: scale(1.1); }
+        .ribbon-emoji { font-size: 100px; animation: bounce 2s infinite; }
+        #content { display: none; animation: fadeIn 1.5s ease-in-out; padding: 20px; }
+        .logo { width: 180px; max-width: 80%; margin-bottom: 20px; border-radius: 10px; }
+        .company-name { font-size: 32px; font-weight: bold; color: #003366; margin: 0; }
+        .tagline { font-size: 18px; color: #555; font-style: italic; margin-top: 10px; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-20px);} 60% {transform: translateY(-10px);} }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+    <div class="ribbon-container" id="ribbonBox" onclick="revealCompany()">
+        <div class="ribbon-emoji">🎀</div>
+        <p style="color: #888; font-weight: bold;">Click the Ribbon to Launch</p>
+    </div>
+    <div id="content">
+        <img src="https://i.ibb.co/Vp8YjFm/infinity-logo.png" alt="InfinitySolutions Logo" class="logo">
+        <h1 class="company-name">InfinitySolutions</h1>
+        <p class="tagline">Limitless Growth</p>
+    </div>
+    <script>
+        function revealCompany() {
+            document.getElementById('ribbonBox').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
